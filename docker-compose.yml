@@ -1,0 +1,16 @@
+# Local MongoDB for development. Data is stored in a named volume.
+#   docker compose up -d     # start
+#   docker compose down      # stop (keeps data)
+#   docker compose down -v   # stop and delete data
+services:
+  mongo:
+    image: mongo:7
+    container_name: cgi-mongo
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:27017:27017' # bound to localhost only
+    volumes:
+      - cgi-mongo-data:/data/db
+
+volumes:
+  cgi-mongo-data:

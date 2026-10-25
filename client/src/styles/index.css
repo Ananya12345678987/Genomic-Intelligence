@@ -1,0 +1,48 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+  }
+  /* Visible, consistent keyboard focus; colour is never the only cue. */
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-ink;
+  }
+  ::selection {
+    @apply bg-pistachio;
+  }
+}
+
+@layer components {
+  .tech {
+    @apply font-mono text-[0.85em] tracking-tight;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill border border-line bg-surface px-3.5 py-2 text-sm font-medium text-ink transition-colors hover:bg-surface-alt disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply border-transparent bg-ink text-canvas hover:bg-ink/90;
+  }
+  .card {
+    @apply rounded-card border border-line bg-surface shadow-soft;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
