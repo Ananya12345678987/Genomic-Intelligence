@@ -1,5 +1,9 @@
 # Cancer Genomic Intelligence (research prototype)
 
+**Live demo:** https://genomic-intelligence.onrender.com
+
+> The demo runs on a free instance, so the first load after idle can take about a minute. It is a research prototype: not clinically validated, and not for patient data.
+
 A chat-first workspace for investigating cancer-associated genetic variants. Enter a gene or variant, paste report text, or upload a text-based PDF; the app finds exact and related records in ClinVar and CIViC, retrieves PubMed publications and ClinicalTrials.gov trials, and shows everything in expandable evidence cards with source links. Structured retrieval and deterministic matching come first; an optional AI layer only summarizes what was retrieved, and its citations are checked against those records.
 
 > **Scope.** Research support and evidence review only. It does not diagnose cancer, recommend treatment, or replace qualified clinical interpretation. It is **not clinically validated, not a medical device, and not ready for patient care.** No compliance with HIPAA, GDPR or any other framework is claimed or has been assessed.
