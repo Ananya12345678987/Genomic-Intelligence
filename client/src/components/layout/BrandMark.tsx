@@ -2,7 +2,7 @@
  * Replaceable brand placeholder. Swap BRAND_NAME and the SVG mark when the
  * startup identity is decided; nothing else depends on them.
  */
-export const BRAND_NAME = '[Startup Name]';
+export const BRAND_NAME = 'Genovata';
 
 export function BrandMark({ size = 28 }: { size?: number }) {
   return (
